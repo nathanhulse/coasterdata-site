@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Support — CoasterData</title>
+<meta name="theme-color" content="#050505">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --bg: #050505; --surface: #0d0c10; --card: #111113;
+    --border: #1e1e22; --green: #00ff88;
+    --text: #e8e8ed; --text-dim: #8e8e93; --text-ghost: #48484a;
+    --mono: 'IBM Plex Mono', monospace;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: var(--mono); background: var(--bg); color: var(--text);
+    line-height: 1.7; -webkit-font-smoothing: antialiased;
+  }
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    background: rgba(5,5,5,0.85);
+    backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
+    border-bottom: 1px solid var(--border);
+  }
+  nav .inner {
+    max-width: 720px; margin: 0 auto; padding: 14px 24px;
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  .nav-brand {
+    display: flex; align-items: center; gap: 10px;
+    text-decoration: none; color: var(--text);
+  }
+  .nav-icon {
+    width: 32px; height: 32px; border-radius: 8px; background: var(--green);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 16px; color: var(--bg); font-weight: 700;
+  }
+  .nav-name { font-size: 14px; font-weight: 600; letter-spacing: 0.5px; }
+  nav a.back { font-size: 12px; color: var(--text-dim); text-decoration: none; }
+  nav a.back:hover { color: var(--green); }
+
+  .content { max-width: 720px; margin: 0 auto; padding: 100px 24px 80px; }
+  h1 { font-size: 28px; font-weight: 700; margin-bottom: 8px; }
+  .subtitle { font-size: 13px; color: var(--text-dim); margin-bottom: 40px; display: block; }
+  h2 { font-size: 15px; font-weight: 600; color: var(--green); margin-top: 32px; margin-bottom: 10px; }
+  p { font-size: 13px; color: var(--text-dim); margin-bottom: 12px; }
+  a { color: var(--green); }
+
+  .faq {
+    background: var(--card); border: 1px solid var(--border);
+    border-radius: 12px; padding: 20px 24px; margin-bottom: 16px;
+  }
+  .faq h3 { font-size: 14px; font-weight: 600; color: var(--text); margin-bottom: 8px; }
+  .faq p { margin-bottom: 0; }
+
+  .contact-box {
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: 12px; padding: 24px; margin-top: 32px; text-align: center;
+  }
+  .contact-box p { color: var(--text); font-size: 14px; }
+  .contact-box a {
+    display: inline-block; margin-top: 12px;
+    background: var(--green); color: var(--bg);
+    padding: 10px 24px; border-radius: 8px;
+    text-decoration: none; font-size: 13px; font-weight: 600;
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="inner">
+    <a href="/" class="nav-brand">
+      <div class="nav-icon">⚡</div>
+      <span class="nav-name">COASTERDATA</span>
+    </a>
+    <a href="/" class="back">← Back to home</a>
+  </div>
+</nav>
+
+<div class="content">
+
+<h1>Support</h1>
+<span class="subtitle">Answers to common questions and how to reach us.</span>
+
+<div class="faq">
+  <h3>Where is my data stored?</h3>
+  <p>All ride recordings, settings, and photos are stored locally on your iPhone. Nothing is uploaded to any server. If you delete the app, your data is deleted with it.</p>
+</div>
+
+<div class="faq">
+  <h3>Why does the app need location access?</h3>
+  <p>Location is used to calculate your speed during a ride (via GPS) and to automatically detect which amusement park you're visiting. Your location is never logged, stored, or sent to us — it's used in real time only.</p>
+</div>
+
+<div class="faq">
+  <h3>Why does the app ask for health/heart rate access?</h3>
+  <p>If you have an Apple Watch, CoasterData can capture your heart rate during rides by running a lightweight workout session. This lets you see your BPM alongside your G-force data. Heart-rate data is never shared or uploaded — it stays on your device. You can deny access and the app works fine without it.</p>
+</div>
+
+<div class="faq">
+  <h3>How do I use the Apple Watch app?</h3>
+  <p>Install CoasterData on your iPhone and the watch app installs automatically. You can start and stop recordings from either device — stats sync between them. For best results, keep both apps open during a ride.</p>
+</div>
+
+<div class="faq">
+  <h3>Can I use the watch as the sensor instead of the phone?</h3>
+  <p>Yes — in Settings, change "Sensor Source" to "Apple Watch." The watch's accelerometer will stream data to the phone for recording. This can be useful when the watch is strapped tightly to your wrist and the phone is loose in a pocket.</p>
+</div>
+
+<div class="faq">
+  <h3>What does the CSV export contain?</h3>
+  <p>A plain text file with one row per sensor sample (~50 per second): timestamp, vertical G, longitudinal G, lateral G, and total magnitude. You can open it in Excel, Google Sheets, or any data tool.</p>
+</div>
+
+<div class="faq">
+  <h3>My recording stopped when my phone locked. Why?</h3>
+  <p>CoasterData keeps the screen awake during recording to prevent this. If your recording was interrupted, make sure Low Power Mode is off (it can override the wake lock) and that the app was in the foreground when you started recording.</p>
+</div>
+
+<div class="faq">
+  <h3>How do I delete a ride?</h3>
+  <p>In the History tab, swipe left on any ride to delete it. The data is removed permanently from your device.</p>
+</div>
+
+<div class="contact-box">
+  <p>Didn't find your answer?</p>
+  <a href="mailto:support@coasterdata.app">Email support@coasterdata.app</a>
+</div>
+
+</div>
+</body>
+</html>
